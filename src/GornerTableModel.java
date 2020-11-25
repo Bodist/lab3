@@ -1,6 +1,3 @@
-package com.company;
-
-
 import javax.swing.table.AbstractTableModel;
 
 
@@ -87,7 +84,7 @@ public class GornerTableModel extends AbstractTableModel {
             case 1:
                 return "Значение многочлена";
             default:
-                return "Значение простое?";
+                return "Малое число?";
         }
     }
     // необходимо предоставить сведения о типе данных в столбцах, в противном случае они будут отображены как строки

@@ -1,6 +1,3 @@
-package com.company;
-
-
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.FlowLayout;
@@ -15,22 +12,16 @@ import javax.swing.table.TableCellRenderer;
 public class GornerTableCellRenderer implements TableCellRenderer {
     private JPanel panel = new JPanel();
     private JLabel label = new JLabel();
-    // Ищем ячейки, строковое представление которых совпадает с needle
-    // (иголкой). Применяется аналогия поиска иголки в стоге сена, в роли
-    // стога сена - таблица
+    // Ищем ячейки, строковое представление которых совпадает с needle(иголкой). Применяется аналогия поиска иголки в стоге сена, в роли стога сена - таблица
     private String needle = null;
     private DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance();
 
     public GornerTableCellRenderer() {
         // Показывать только 5 знаков после запятой
         formatter.setMaximumFractionDigits(5);
-        // Не использовать группировку (т.е. не отделять тысячи
-        // ни запятыми, ни пробелами), т.е. показывать число как "1000",
-        // а не "1 000" или "1,000"
+        // Не использовать группировку (т.е. не отделять тысяч ни запятыми, ни пробелами), т.е. показывать число как "1000",а не "1 000" или "1,000"
         formatter.setGroupingUsed(false);
-        // Установить в качестве разделителя дробной части точку, а не
-        // запятую. По умолчанию, в региональных настройках
-        // Россия/Беларусь дробная часть отделяется запятой
+        // Установить в качестве разделителя дробной части точку, а не запятую. По умолчанию, в региональных настройках Россия/Беларусь дробная часть отделяется запятой
         DecimalFormatSymbols dottedDouble = formatter.getDecimalFormatSymbols();
         dottedDouble.setDecimalSeparator('.');
         formatter.setDecimalFormatSymbols(dottedDouble);
@@ -50,7 +41,7 @@ public class GornerTableCellRenderer implements TableCellRenderer {
         int count = 0;
 
 
-        if (indexDot != -1) {
+       /* if (indexDot != -1) {
             for (int i = indexDot + 1; i < formattedDouble.length(); i++) {
                 char letter = formattedDouble.charAt(i);
                 if (letter == '1') {
@@ -63,9 +54,9 @@ public class GornerTableCellRenderer implements TableCellRenderer {
                     count += 1;
                 }
             }
-        }
+        }*/
 
-        if (count == formattedDouble.length() - formattedDouble.indexOf(".") - 1)
+        /*if (count == formattedDouble.length() - formattedDouble.indexOf(".") - 1)
         {
             if (col==1 && needle!=null && needle.equals(formattedDouble))
                 panel.setBackground(Color.RED);
@@ -76,8 +67,8 @@ public class GornerTableCellRenderer implements TableCellRenderer {
             if (col==1 && needle!=null && needle.equals(formattedDouble))
                 panel.setBackground(Color.RED);
             else panel.setBackground(Color.WHITE);
-        }
-
+        }*/
+panel.setBackground(Color.WHITE);
         return panel;
     }
 

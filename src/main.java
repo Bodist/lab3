@@ -1,7 +1,4 @@
-package com.company;
-
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -133,7 +130,7 @@ public class main extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                JOptionPane.showMessageDialog(main.this, "Бубен Иван ✔ \n8 группа ✔\n2-й курс ✔\n☺☺☺",
+                JOptionPane.showMessageDialog(main.this, "Лайша Богдан ✔ \n8 группа ✔\n2-й курс ✔\n☺☺☺",
                         "Информация о студенте", JOptionPane.PLAIN_MESSAGE);
             }
         };
