@@ -62,8 +62,8 @@ public class GornerTableModel extends AbstractTableModel {
                 boolean flag = true;
                 for (int j = 2; j <= result[0] - 1; j++)
                 {
-                    temp = (int)result[0] % j;
-                    if (temp == 0)
+                    temp = (int)result[0];
+                    if (temp > 0)
                     {
                         flag = false;
                         break;

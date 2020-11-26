@@ -125,13 +125,12 @@ public class main extends JFrame {
         searchValueMenuItem = tableMenu.add(searchValueAction);
         searchValueMenuItem.setEnabled(false);
 
-        Action showInformationAction = new AbstractAction("О программе")
+        Action showInformationAction = new AbstractAction("Справка")
         {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                JOptionPane.showMessageDialog(main.this, "Лайша Богдан ✔ \n8 группа ✔\n2-й курс ✔\n☺☺☺",
-                        "Информация о студенте", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(main.this, "Лайша Богдан ✔ \n8 группа ✔\n2-й курс ✔\n☺☺☺", "Информация о студенте", JOptionPane.PLAIN_MESSAGE);
             }
         };
         showInformationMenuItem = refMenu.add(showInformationAction);
@@ -164,8 +163,7 @@ public class main extends JFrame {
         hboxRange.add(textFieldStep);
         hboxRange.add(Box.createHorizontalGlue());
         // Установить предпочтительный размер области равным удвоенному минимальному, чтобы при компоновке область совсем не сдавили
-        hboxRange.setPreferredSize(new Dimension(new Double(hboxRange.getMaximumSize().getWidth()).intValue(),
-                new Double(hboxRange.getMinimumSize().getHeight()).intValue() * 2));
+        hboxRange.setPreferredSize(new Dimension(new Double(hboxRange.getMaximumSize().getWidth()).intValue(), new Double(hboxRange.getMinimumSize().getHeight()).intValue() * 2));
         // Установить область в верхнюю (северную) часть компоновки
         getContentPane().add(hboxRange, BorderLayout.NORTH);
 
